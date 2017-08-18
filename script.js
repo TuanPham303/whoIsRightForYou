@@ -26,7 +26,7 @@ var male = new Vue ({
       ["Keeping you happy","Flirting and romance","Singing","Doing fun stuffs","Being herself"],
     ],
     i: 0,
-    showQuiz: true,
+    showQuiz: false,
     score: 0,
     countDown: 15
   },
