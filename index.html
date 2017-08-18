@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- <div class="genderWrap">
+    <div class="gender">Male</div>
+    <div class="gender">Female</div>
+  </div> -->
+  
+
+  <div id="male">
+    <h1 class="greet">Don't know which type of girl is right for you? Worry no more!!!</h1>
+    <button v-on:click="toggleQuiz">Click here to find out</button>
+    <div id="quiz" v-show="showQuiz">
+      <p id="intro">You are going to answer 10 questions. For each qquestion, you will have 15 seconds to make your choice. Remember to choose <u>ONLY 1 TIME</u> to ensure the accuracy of the result. Now when you are ready, click Start</p>
+      <button v-on:click="nextQuestion">Start</button>
+      <div id="questionWrap">
+        <div class="question">{{questions[i]}}</div>
+      </div>
+      <div id="choiceWrap" v-for="choice in choices[i]">
+        <input type="radio" class="choice" v-bind:value="choice" v-on:click="result"> {{choice}}
+      </div>
+    </div>
+  </div>
+
+  <div id="result" v-show="showResult">
+    <p id="quit" v-on:click="quit">X</p>
+    <img :src="imgUrlGirl[resultId]" alt="">
+    <p>{{maleResult[resultId]}}</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
