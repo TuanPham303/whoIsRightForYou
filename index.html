@@ -25,6 +25,7 @@
       <div id="choiceWrap" v-for="choice in choices[i]">
         <input type="radio" class="choice" v-bind:value="choice" v-on:click="result"> {{choice}}
       </div>
+      <div id="timer">Time remaining: {{countDown}}</div>
     </div>
   </div>
 

@@ -50,6 +50,9 @@
           line-height: 50px; }
           * body #male #quiz #choiceWrap input, * html #male #quiz #choiceWrap input {
             cursor: pointer; }
+        * body #male #quiz #timer, * html #male #quiz #timer {
+          margin-top: 20px;
+          font-size: 20px; }
     * body #result, * html #result {
       position: fixed;
       top: 0;

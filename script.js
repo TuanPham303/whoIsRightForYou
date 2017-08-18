@@ -26,8 +26,9 @@ var male = new Vue ({
       ["Keeping you happy","Flirting and romance","Singing","Doing fun stuffs","Being herself"],
     ],
     i: 0,
-    showQuiz: false,
-    score: 0
+    showQuiz: true,
+    score: 0,
+    countDown: 15
   },
   methods: {
     nextQuestion: function(){
@@ -43,6 +44,12 @@ var male = new Vue ({
           ele[i].checked = false;
         }
       }, 15000);
+      setInterval(function (){
+        male.countDown--;
+        if (male.countDown === 0) {
+          male.countDown = 15;
+        }
+      }, 1000);
     },
     toggleQuiz: function(){
       male.showQuiz = true;
